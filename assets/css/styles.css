@@ -1,0 +1,795 @@
+  /* TYPO */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+@font-face {
+    font-family: "Codigra";
+    src: url("../font/codigra-modern-retro-font/Codigra.otf");
+}
+
+  /* SCROLL BAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4e4683c5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4e4683;
+}
+
+*{
+  cursor: default;
+}
+
+::selection {
+  color: none;
+  background: none;
+}
+/* For Mozilla Firefox */
+::-moz-selection {
+  color: none;
+  background: none;
+}
+
+  /* MOBILE FIRST */
+@media screen and (min-width : 320px) {
+
+
+    html {
+        font-size: 10px;
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        font-size: 1.6rem;
+        height: 100vh;
+        background-color: white;
+        font-family: "Codigra";
+    }
+
+  /* HEADER */
+    
+    .header {
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vw;
+    }
+
+  /* HEADER TEXT */  
+
+    .header__greeting {
+      font-size: 5vw;
+      margin: 15rem 1rem 0 2rem;
+      font-family: 'Epilogue', sans-serif;
+      color: #4e4683c5;
+      font-weight:600;
+    }
+
+    .header__container__title{
+      display:flex; 
+      flex-direction: column;
+    }
+
+    .header__title {
+      font-size: 12.5vw;
+      color: #4e4683;
+      font-weight: bolder;
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 5rem;
+      margin-left: 1rem;
+  }
+
+  /* PORTFOLIO */
+  
+.portfolio-container {
+  position: fixed;
+  right:0;
+  top:0;
+  display: flex;
+  width: 10rem;
+  height: 10rem;
+}
+
+    .portfolio {
+        text-decoration: none;
+        color: #4e4683c5;
+        writing-mode: vertical-lr;    
+        font-size: 6vw;
+        position: fixed;
+        top: 5rem;
+        margin-left: 6rem;
+        transition: 0.5s;
+    }
+    
+    .portfolio:before {
+        transform: rotate(270deg);
+        content:" ";
+        height: 2px;
+        width: 24vw;
+        background: #4e4683c5;
+        display: block; 
+        position: absolute;
+        left: -8vw;
+        bottom: 43vw;
+    }
+
+    .portfolio:hover {
+      cursor: default;
+      transform:translateY(1rem)
+    }
+
+    /* MENU */
+
+.header__menu {
+    cursor: pointer;
+    position: fixed;
+    top: 2rem;
+    z-index: 2;
+  }
+  
+.header__menu__bar {
+    height: 0.4rem;
+    background-color: #4e4683;
+    margin: 0.8rem 0 0.8rem 1rem;
+    border-radius: 5rem;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+
+.bar1{
+    width: 3rem;
+  }
+
+.bar2{
+    width: 2rem;
+    transition: 0.4s;
+  }
+
+  
+.bar3{
+    width: 1rem;
+}
+
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: rotate(-45deg) translate(-1rem, 0.6rem) ;
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    width: 3rem;
+    transform: rotate(45deg) translate(-1rem, -0.7rem) ;
+  }
+
+  .header__menu_icons {
+    display: none;
+  }
+
+  /* active burger_icon*/
+  .display{
+    width: 10vw;
+    position: fixed;
+    top:2rem;
+    left:8rem;
+    margin-right: 2rem;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  #linkedin{
+    left: 15rem;
+  }
+
+
+/* --------------- */
+
+  /* MAIN */
+
+
+.main__introduction {
+  width: 100%;
+  height: 230vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
+
+.main__introduction__title {
+  text-align: center;
+  font-size: 6vw;
+  margin: 10vw 0 2rem 0;
+  color: #4e4683;
+}
+
+.main__introduction__text {
+  font-size: 5vw;
+  font-family: "Epilogue", sans-serif;
+  width: 30rem;
+  color: #4e4683c5;
+  line-height: 2.5rem;
+}
+
+  /* MODAL */
+
+.main__modal{
+  justify-self: center;
+  border: 2px solid #4e4683;
+  width: 80%;
+  height: 140vw;
+  border-radius: 5rem;
+  display:none;
+  animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1.2s; /* don't forget to set a duration! */
+}
+
+.main__modal__containers{
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main__modal__title{
+  font-family: "Epilogue", sans-serif;
+  color:#4e4683c5;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+}
+
+.main__dev-icon{
+  width: 15vw;
+}
+
+.main__database_modal{
+  font-size: 3vw;
+  font-family: "Epilogue", sans-serif;
+  color: #4e4683c5;
+  align-self: center;
+  line-height: 1.5rem;
+}
+
+/* --- */
+
+.main__introduction__btn {
+  width: 30vw;
+  height: 15vw;
+  padding: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+  background-color: white;
+  border: 2px solid #FFD803;
+  border-radius: 1rem;
+  cursor:pointer;
+}
+
+.main__introduction__btn__text {
+  color: #4e4683;
+  font-family: "Codigra";
+  cursor: pointer;
+}
+
+.main__introduction__btn:hover {
+  background: #FFD803;
+  transition: 0.2s;
+}
+
+.main__introduction__btn:hover .main__introduction__btn__text {
+  color: #fff;
+  transition: 0.2s;
+}
+
+
+/* --------------- */
+
+  /* PROJECT */
+
+.main__flex-containers {
+  width: 100%;
+  height: 20rem;
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+  display: flex;
+}
+
+.main__flex-containers__img {
+  width: 46%;
+  height: 100%;
+  border: 2px solid #4e468328;
+  border-radius: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-text{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+
+}
+
+.main__flex-containers__right-text, .main__flex-containers__left-text{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:5rem;
+}
+
+.main__project-intro{
+color:#4e4683c5;
+width: 60%;
+display: block;
+font-family: 'Epilogue', sans-serif;
+justify-content: center;
+font-size: 3vw;
+text-align: center;
+line-height: 1.5rem;
+}
+
+.main__legend{
+  font-size: 4vw;
+  color: #4e4683;
+}
+
+.main__right-legend {
+  writing-mode:vertical-lr ;
+}
+
+.main__left-legend {
+  writing-mode:vertical-lr ;
+  transform: rotate(180deg);
+}
+
+  /* Logo projects */
+
+.main__logo-1{
+  cursor: pointer;
+  width: 25vw;
+}
+
+.main__logo-svg{
+  position: absolute;
+  width: 15rem;
+}
+
+  /* SEPARATION SECTION SVG */
+
+.middle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+  /* FOOTER */ 
+
+.footer{
+  width: 100%;
+  height: 50rem;
+}
+
+.form-container {
+  display: flex; 
+  flex-direction: column;
+}
+
+.contact-form__title {
+  font-size: 5vw;
+  text-align: center;
+  color: #4e4683;
+  font-weight: bold;
+  padding: 10rem 0 3rem 0;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+
+.labels {
+  font-size: 4vw;
+  color: #4e4683;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.inputs {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #272343;
+  background-color: rgba(255, 255, 255, 0);
+  outline: none;
+  font-family: 'Epilogue', sans-serif;
+  color: #4e4683;
+  cursor: pointer;
+}
+
+.form__submit-btn {
+  margin-top: 2rem;
+  width: 30vw;
+  height: 10vw;
+  align-self: center;
+  background-color: white;
+  border: 2px solid #FFD803;
+  border-radius: 1rem;
+  cursor:pointer;
+}
+
+.form__submit-btn__text{
+  font-size: 4vw;
+  color: #4e4683;
+  font-family: 'Codigra';
+  cursor: pointer;
+}
+
+.form__submit-btn:hover {
+  background-color: #FFD803;
+  transition: 0.2s;
+}
+
+.form__submit-btn:hover .form__submit-btn__text{ 
+  color: white;
+}
+
+/* ---------- Utility ------------- */
+
+.main__flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:6vw;
+}
+
+.hidden{
+  display: none;
+}
+
+.in-process {
+  font-size: 3vw;
+  color: #FFD803;
+}
+
+.yellow {
+  color: #FFD803;
+}
+
+/* ----------- SVG ------------ */
+
+path {
+  stroke-width: 2vw;
+}
+
+.header__svg {
+width: 100%;
+margin-top: 10vw;
+}
+
+
+.footer-svg {
+height: 100px;
+}
+/* ----- animation ----- */
+
+.animate__fadeInLeft{
+  animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1.5s; /* don't forget to set a duration! */
+}
+
+.animate__fadeInDown{
+  animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.git_animate__fadeInDown{
+  animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.3s; /* don't forget to set a duration! */
+}
+
+.linkedin_animate__fadeInDown{
+  animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.7s; /* don't forget to set a duration! */
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+}
+
+  /* DESKTOP */
+@media screen and (min-width : 700px) {
+
+  html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    height: 100vh;
+}
+  /* HEADER */
+.header{
+  height: 42vw;
+}
+
+  /* HEADER TEXT */
+
+.header__greeting {
+  font-size:  1.5vw;
+  width: 82%;
+  margin: 0 auto;
+  margin-top: 20rem;
+}
+
+.header__container__title{
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2vw;
+}
+
+.header__title {
+  text-align: center;
+  font-size: 9vw;
+}
+
+  /* PORTFOLIO */
+  .portfolio {
+    font-size: 2vw;
+    right:5vw;
+  }
+  
+  .portfolio:before {
+    width: 5vw;
+    left: -1.4vw;
+    bottom: 13vw;
+  } 
+
+/* MENU */
+
+.header__menu__bar {
+  height: 0.6rem;
+  margin: 1rem 0 0 1.5rem;
+}
+
+.bar1{
+  width: 5rem;
+}
+
+.bar2{
+  width: 3.5rem;
+  transition: 0.4s;
+}
+
+.bar3{
+  width: 2rem;
+}
+
+.change .bar3 {
+  width: 5rem;
+  transform: rotate(45deg) translate(-1.4rem, -1.2rem) ;
+}
+
+.header__menu_icons{
+  width: 5rem;
+  position: fixed;
+  bottom: 40rem;
+  left:12rem;
+}
+
+#linkedin{
+  left: 23rem;
+} 
+/* --------------- */
+
+  /* MAIN */
+
+.main__introduction{
+  height: 110rem;
+  justify-content:start
+}
+
+.main__introduction__title {
+  font-size: 3vw;
+  margin-top: 0rem;
+  margin-bottom: 7rem;
+}
+
+.main__introduction__text {
+  font-size: 2vw;
+  width: 80vw;
+  text-align: justify;
+  line-height: 4.5rem;
+}
+
+  /* MODAL */
+
+.main__modal{
+  padding:0;
+  width: 85%;
+  height: 30vw;
+}
+
+.main__modal__containers{
+  width: 17vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.main__modal__title{
+  font-size: 1.5vw;
+  margin-bottom: 2rem;
+}
+
+.main__dev-icon{
+  width: 5vw;
+}
+
+.main__database_modal{
+  font-size: 1vw;
+  line-height: 3rem;
+}
+
+.hyper_text{
+  margin-top: 0;
+}
+
+/* --- */
+
+.main__introduction__btn{
+  margin-top: 7rem;
+  width: 10vw;
+  height: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__introduction__btn__text {
+  font-size: 1.2vw;
+  margin-top: 0.5rem;
+}
+
+  /* --------------- */
+
+  /* PROJECT */
+
+.main__flex-containers {
+  height: 30vw;
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+}
+
+.main__flex-containers__img{
+  border-radius: 0rem;
+  width: 48.7%;
+}
+
+.vertical-text{
+  gap:13rem;
+}
+
+.main__flex-containers__right-text, .main__flex-containers__left-text {
+  gap:15rem;
+}
+
+.main__project-intro{
+  font-size: 1.5vw;
+  line-height: 4rem;
+}
+
+.main__legend{
+  font-size: 2vw;
+}
+
+.main__logo-1{
+  width: 15vw;
+  z-index: 1;
+  
+}
+
+.main__logo-svg{
+  width: 35vw;
+  cursor: pointer;
+}
+
+
+  /* --------------------- */
+
+  /* FOOTER */
+
+.footer{
+  height: 95vh;
+}
+
+
+.contact-form__title {
+  font-size: 4vw;
+}
+
+.form-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem;
+}
+
+.labels {
+  font-size: 2vw;
+}
+
+.inputs {
+  width: 40vw;
+  font-size: 1.5VW;
+}
+
+.form__submit-btn {
+  margin: 4rem 0 5rem 0rem;
+  width: 10vw;
+  height: 5vw;
+}
+
+.form__submit-btn__text{
+  font-size: 2vw;
+  color: #4e4683;
+  font-family: 'Codigra';
+}
+
+/* ---------------- SVG ----------------- */
+path {
+  stroke-width: 3;
+}
+
+.header__svg{
+  margin-top: 5rem;
+}
+
+.footer-svg {
+  height: 520px;
+  }
+
+  /* --------------- Utility --------------- */
+
+  .main__flex{
+    flex-direction: row;
+    justify-content: center;
+    gap: 0vw;
+  }
+
+  .in-process {
+    font-size: 1.5vw;
+  }
+
+}
