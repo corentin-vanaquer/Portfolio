@@ -366,6 +366,11 @@ line-height: 1.5rem;
   width: 25vw;
 }
 
+.main__logo-1:hover{
+  width: 28vw;
+  transition: 1s;
+}
+
 .main__logo-svg{
   position: absolute;
   width: 15rem;
@@ -717,7 +722,12 @@ body {
 .main__logo-1{
   width: 15vw;
   z-index: 1;
-  
+  transition: 0.5s;
+}
+
+.main__logo-1:hover{
+  width: 18vw;
+  transition: 0.5s;
 }
 
 .main__logo-svg{
