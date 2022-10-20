@@ -386,7 +386,7 @@ line-height: 1.5rem;
   color: #4e4683c5;
   font-size: 3vw;
   cursor: pointer;
-  padding: 4rem;
+  padding: 3rem;
   text-decoration: none;
 }
 
@@ -507,13 +507,16 @@ path {
 }
 
 .header__svg {
-width: 100%;
-margin-top: 10vw;
+  width: 100%;
+  margin-top: 10vw;
 }
 
+.click_svg{
+  display: none;
+}
 
 .footer-svg {
-height: 100px;
+  height: 100px;
 }
 /* ----- animation ----- */
 
@@ -726,7 +729,7 @@ body {
 #cosyworking > .main__logo-1{
   width: 15vw;
   transition: 0.5s;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 #cosyworking:hover > .main__logo-1{
@@ -764,6 +767,7 @@ body {
 
 .click_call{
   font-size: 1.2vw;
+  margin-top: 2rem;
 }
 
   /* --------------------- */
@@ -814,6 +818,14 @@ path {
 
 .header__svg{
   margin-top: 5rem;
+}
+
+.click_svg{
+  display: block;
+  width: 20rem;
+  position: absolute;
+  margin-top: 3rem;
+  z-index: -1;
 }
 
 .footer-svg {
