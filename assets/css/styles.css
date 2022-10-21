@@ -307,11 +307,13 @@
   display: flex;
 }
 
+.project__container{
+  position: relative;
+}
+
 .main__flex-containers__img {
-  width: 46%;
+  width: 54.6%;
   height: 100%;
-  border: 2px solid #4e468328;
-  border-radius: 0rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,23 +364,29 @@ line-height: 1.5rem;
 
 #cosyworking{
   position: relative;
+  border-right: 2px solid #FFD803;
 }
 
 #cosyworking > .main__logo-1{
-  width: 28vw;
+  width: 30vw;
   position: absolute;
   top: 0;
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 
 #kanban{
   position: relative;
+  border-left: 2px solid #FFD803;
 }
 
 #kanban > .in-process{
   position: absolute;
   top: 0;
-  margin-top: 4rem;
+  margin-top: 8rem;
+}
+
+#rapido-api{
+  border-right: 2px solid #FFD803;
 }
 
 .click_call{
@@ -386,14 +394,9 @@ line-height: 1.5rem;
   color: #4e4683c5;
   font-size: 3vw;
   cursor: pointer;
-  padding: 3rem;
+  padding: 1.5rem;
   text-decoration: none;
-}
-
-  /* Logo projects */
-
-.main__logo-1{
-  width: 25vw;
+  margin-top: 8rem;
 }
 
 
@@ -511,8 +514,19 @@ path {
   margin-top: 10vw;
 }
 
+.lign-svg{
+  width: 0.14rem;
+  height: 21rem;
+  margin-left: 50%;
+  position: absolute;
+}
+
 .click_svg{
-  display: none;
+    display: block;
+    width: 6rem;
+    position: absolute;
+    margin-top: 15rem;
+    z-index: -1;
 }
 
 .footer-svg {
@@ -541,7 +555,7 @@ path {
 }
 
 .reveal{
-  position: relative;
+  /* position: relative; */
   transform: translateY(150px);
   opacity: 0;
   transition: 0.5s all ease;
@@ -723,24 +737,24 @@ body {
 
 .main__flex-containers__img{
   border-radius: 0rem;
-  width: 48.7%;
+  width: 52%;
 }
 
 #cosyworking > .main__logo-1{
-  width: 15vw;
+  width: 16vw;
   transition: 0.5s;
-  margin-top: 5rem;
+  margin-top: 15rem;
 }
 
 #cosyworking:hover > .main__logo-1{
-  width: 18vw;
+  width: 17vw;
   transition: 0.5s;
 }
 
 
 #kanban > .in-process{
   transition: 0.5s;
-  margin-top: 10rem;
+  margin-top: 28rem;
 }
 
 #kanban:hover > .in-process{
@@ -757,8 +771,8 @@ body {
 }
 
 .main__project-intro{
-  font-size: 1.5vw;
-  line-height: 4rem;
+  font-size: 2vw;
+  line-height: 5rem;
 }
 
 .main__legend{
@@ -766,8 +780,8 @@ body {
 }
 
 .click_call{
-  font-size: 1.2vw;
-  margin-top: 2rem;
+  font-size: 1vw;
+  margin-top: 20rem;
 }
 
   /* --------------------- */
@@ -820,11 +834,15 @@ path {
   margin-top: 5rem;
 }
 
+.lign-svg{
+  height: 55rem;
+}
+
 .click_svg{
   display: block;
-  width: 20rem;
+  width: 12rem;
   position: absolute;
-  margin-top: 3rem;
+  margin-top: 40rem;
   z-index: -1;
 }
 

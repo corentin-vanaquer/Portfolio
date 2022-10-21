@@ -7,6 +7,8 @@ const app = {
     app.displayModal();
 
     app.reveal();
+
+    // app.svgDrawing();
     
     window.addEventListener("scroll", app.reveal);
   },
@@ -32,6 +34,17 @@ displayModal() {
     discoverBtn.addEventListener('click', () => {
     textAbout.classList.toggle('hidden')
     modal.classList.toggle('main__flex')
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      scrollTo({
+        top:620,
+        behavior: "smooth"
+      })
+    }else{
+      scrollTo({
+        top:920,
+        behavior: "smooth"
+      })
+    }
   });
 },
 
@@ -50,7 +63,26 @@ reveal() {
       }
     }
   },
+
+  svgDrawing() {
+    let path = document.getElementById('path');
+    let pathLenght = path.getTotalLength();
+
+    path.style.strokeDasharray = pathLenght + ' ' + pathLenght;
+
+    path.style.strokeDashoffset = pathLenght;
+
+    window.addEventListener('scroll', () => {
+
+      console.log(window.scrollY)
+
+        const scrollPercentage = (document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
   
+        const drawLength = pathLenght * scrollPercentage * scrollPercentage;
+  
+        path.style.strokeDashoffset = pathLenght - drawLength;
+    })
+}
 }
 
 //~ ----------  Objects
