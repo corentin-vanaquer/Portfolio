@@ -382,7 +382,7 @@ line-height: 1.5rem;
 
 #kanban > .in-process{
   margin-top: 11rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.7rem;
 }
 
 #rapido-api{
@@ -396,7 +396,7 @@ line-height: 1.5rem;
   cursor: pointer;
   padding: 1.5rem;
   text-decoration: none;
-  margin-top: 1rem;
+  margin-top: 0.7rem;
 }
 
 
