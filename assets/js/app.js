@@ -7,6 +7,8 @@ const app = {
     app.displayModal();
 
     app.reveal();
+
+    app.contactScroll()
     
     window.addEventListener("scroll", app.reveal);
   },
@@ -24,6 +26,7 @@ displayMenuIcons() {
   menuHTMLElm.addEventListener('click', () => {
       linkedinIcon.classList.toggle('display');
       githubIcon.classList.toggle('display');
+      contactIcon.classList.toggle('display');
     });
 },
 
@@ -32,6 +35,17 @@ displayModal() {
     discoverBtn.addEventListener('click', () => {
     textAbout.classList.toggle('hidden')
     modal.classList.toggle('main__flex')
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      scrollTo({
+        top:620,
+        behavior: "smooth"
+      })
+    }else{
+      scrollTo({
+        top:920,
+        behavior: "smooth"
+      })
+    }
   });
 },
 
@@ -50,13 +64,42 @@ reveal() {
       }
     }
   },
+
+  svgDrawing() {
+    let path = document.getElementById('path');
+    let pathLenght = path.getTotalLength();
+
+    path.style.strokeDasharray = pathLenght + ' ' + pathLenght;
+
+    path.style.strokeDashoffset = pathLenght;
+
+    window.addEventListener('scroll', () => {
+
+      console.log(window.scrollY)
+
+        const scrollPercentage = (document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
   
+        const drawLength = pathLenght * scrollPercentage * scrollPercentage;
+  
+        path.style.strokeDashoffset = pathLenght - drawLength;
+    })
+  },
+
+  contactScroll() {
+    contactIcon.addEventListener('click', () => {
+      scrollTo({
+        top:5000,
+        behavior: "smooth"
+      })
+    })
+  }
 }
 
 //~ ----------  Objects
 const menuHTMLElm = document.querySelector('.header__menu');
 const linkedinIcon = document.getElementById('github');
 const githubIcon = document.getElementById('linkedin');
+const contactIcon = document.getElementById('contact');
 const discoverBtn = document.querySelector('.main__introduction__btn')
 const textAbout = document.querySelector('.main__introduction__text')
 const modal = document.querySelector('.main__modal')

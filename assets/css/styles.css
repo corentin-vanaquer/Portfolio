@@ -134,7 +134,7 @@
   
 .header__menu__bar {
     height: 0.4rem;
-    background-color: #4e4683;
+    background-color: #4e4683c5;
     margin: 0.8rem 0 0.8rem 1rem;
     border-radius: 5rem;
     transition: 0.4s;
@@ -187,8 +187,13 @@
   }
 
   #linkedin{
-    left: 15rem;
+    left: 18rem;
   }
+
+  #contact{
+    left:13rem;
+  }
+
 
 
 /* --------------- */
@@ -307,11 +312,13 @@
   display: flex;
 }
 
+.project__container{
+  position: relative;
+}
+
 .main__flex-containers__img {
-  width: 46%;
+  width: 54.6%;
   height: 100%;
-  border: 2px solid #4e468328;
-  border-radius: 0rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -361,39 +368,35 @@ line-height: 1.5rem;
 }
 
 #cosyworking{
-  position: relative;
+  border-right: 2px solid #FFD803;
 }
 
 #cosyworking > .main__logo-1{
-  width: 28vw;
-  position: absolute;
-  top: 0;
-  margin-top: 3rem;
+  width: 30vw;
+  margin-top: 6rem;
 }
 
 #kanban{
-  position: relative;
+  border-left: 2px solid #FFD803;
 }
 
 #kanban > .in-process{
-  position: absolute;
-  top: 0;
-  margin-top: 4rem;
+  margin-top: 11rem;
+  padding-bottom: 1.7rem;
+}
+
+#rapido-api{
+  border-right: 2px solid #FFD803;
 }
 
 .click_call{
   font-family: 'Epilogue', sans-serif;
-  color: #4e4683c5;
+  color: #FFF;
   font-size: 3vw;
   cursor: pointer;
-  padding: 3rem;
+  padding: 1.5rem;
   text-decoration: none;
-}
-
-  /* Logo projects */
-
-.main__logo-1{
-  width: 25vw;
+  margin-top: 0.7rem;
 }
 
 
@@ -511,8 +514,19 @@ path {
   margin-top: 10vw;
 }
 
+.lign-svg{
+  width: 0.14rem;
+  height: 21rem;
+  margin-left: 50%;
+  position: absolute;
+}
+
 .click_svg{
-  display: none;
+    display: block;
+    width: 6rem;
+    position: absolute;
+    margin-top: 15rem;
+    z-index: -1;
 }
 
 .footer-svg {
@@ -537,11 +551,16 @@ path {
 
 .linkedin_animate__fadeInDown{
   animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 0.7s; /* don't forget to set a duration! */
+  animation-duration: 0.9s; /* don't forget to set a duration! */
+}
+
+.contact_animate__fadeInDown{
+  animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.6s; /* don't forget to set a duration! */
 }
 
 .reveal{
-  position: relative;
+  /* position: relative; */
   transform: translateY(150px);
   opacity: 0;
   transition: 0.5s all ease;
@@ -635,8 +654,33 @@ body {
 }
 
 #linkedin{
-  left: 23rem;
+  left: 26rem;
+  transition: 0.4s;
 } 
+
+#github{
+  transition: 0.4s;
+}
+
+#contact{
+  transition: 0.4s;
+  left: 19rem;
+}
+
+#linkedin:hover {
+  width: 5.5rem;
+  transition: 0.4s;
+}
+
+#github:hover {
+  width: 5.5rem;
+  transition: 0.4s;
+}
+
+#contact:hover{
+  width: 5.5rem;
+  transition: 0.4s;
+}
 /* --------------- */
 
   /* MAIN */
@@ -716,37 +760,28 @@ body {
   /* PROJECT */
 
 .main__flex-containers {
-  height: 30vw;
+  height: 60vh;
   margin-top: 15rem;
   margin-bottom: 15rem;
 }
 
 .main__flex-containers__img{
   border-radius: 0rem;
-  width: 48.7%;
+  width: 52vw;
+  justify-content: space-evenly;
 }
 
 #cosyworking > .main__logo-1{
-  width: 15vw;
-  transition: 0.5s;
-  margin-top: 5rem;
-}
-
-#cosyworking:hover > .main__logo-1{
-  width: 18vw;
-  transition: 0.5s;
+  width: 16vw;
+  margin-top: 0rem;
+  margin-bottom: 4rem;
 }
 
 
 #kanban > .in-process{
-  transition: 0.5s;
-  margin-top: 10rem;
+  margin-top: 20rem;
 }
 
-#kanban:hover > .in-process{
-  font-size: 1.8vw;
-  transition: 0.5s;
-}
 
 .vertical-text{
   gap:13rem;
@@ -757,8 +792,8 @@ body {
 }
 
 .main__project-intro{
-  font-size: 1.5vw;
-  line-height: 4rem;
+  font-size: 2vw;
+  line-height: 5rem;
 }
 
 .main__legend{
@@ -766,8 +801,9 @@ body {
 }
 
 .click_call{
-  font-size: 1.2vw;
-  margin-top: 2rem;
+  font-size: 1vw;
+  margin-top: 0rem;
+  color:#FFF;
 }
 
   /* --------------------- */
@@ -820,12 +856,19 @@ path {
   margin-top: 5rem;
 }
 
+.lign-svg{
+  height: 55rem;
+}
+
 .click_svg{
   display: block;
-  width: 20rem;
+  width: 7vw;
   position: absolute;
-  margin-top: 3rem;
-  z-index: -1;
+  margin-top: 32rem;
+}
+
+.click_call:hover{
+  color:#FFD803;
 }
 
 .footer-svg {
