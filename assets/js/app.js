@@ -8,7 +8,7 @@ const app = {
 
     app.reveal();
 
-    // app.svgDrawing();
+    app.contactScroll()
     
     window.addEventListener("scroll", app.reveal);
   },
@@ -26,6 +26,7 @@ displayMenuIcons() {
   menuHTMLElm.addEventListener('click', () => {
       linkedinIcon.classList.toggle('display');
       githubIcon.classList.toggle('display');
+      contactIcon.classList.toggle('display');
     });
 },
 
@@ -82,13 +83,23 @@ reveal() {
   
         path.style.strokeDashoffset = pathLenght - drawLength;
     })
-}
+  },
+
+  contactScroll() {
+    contactIcon.addEventListener('click', () => {
+      scrollTo({
+        top:5000,
+        behavior: "smooth"
+      })
+    })
+  }
 }
 
 //~ ----------  Objects
 const menuHTMLElm = document.querySelector('.header__menu');
 const linkedinIcon = document.getElementById('github');
 const githubIcon = document.getElementById('linkedin');
+const contactIcon = document.getElementById('contact');
 const discoverBtn = document.querySelector('.main__introduction__btn')
 const textAbout = document.querySelector('.main__introduction__text')
 const modal = document.querySelector('.main__modal')

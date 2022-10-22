@@ -134,7 +134,7 @@
   
 .header__menu__bar {
     height: 0.4rem;
-    background-color: #4e4683;
+    background-color: #4e4683c5;
     margin: 0.8rem 0 0.8rem 1rem;
     border-radius: 5rem;
     transition: 0.4s;
@@ -187,8 +187,13 @@
   }
 
   #linkedin{
-    left: 15rem;
+    left: 18rem;
   }
+
+  #contact{
+    left:13rem;
+  }
+
 
 
 /* --------------- */
@@ -363,26 +368,21 @@ line-height: 1.5rem;
 }
 
 #cosyworking{
-  position: relative;
   border-right: 2px solid #FFD803;
 }
 
 #cosyworking > .main__logo-1{
   width: 30vw;
-  position: absolute;
-  top: 0;
   margin-top: 6rem;
 }
 
 #kanban{
-  position: relative;
   border-left: 2px solid #FFD803;
 }
 
 #kanban > .in-process{
-  position: absolute;
-  top: 0;
-  margin-top: 8rem;
+  margin-top: 11rem;
+  padding-bottom: 1rem;
 }
 
 #rapido-api{
@@ -391,12 +391,12 @@ line-height: 1.5rem;
 
 .click_call{
   font-family: 'Epilogue', sans-serif;
-  color: #4e4683c5;
+  color: #FFF;
   font-size: 3vw;
   cursor: pointer;
   padding: 1.5rem;
   text-decoration: none;
-  margin-top: 8rem;
+  margin-top: 1rem;
 }
 
 
@@ -551,7 +551,12 @@ path {
 
 .linkedin_animate__fadeInDown{
   animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 0.7s; /* don't forget to set a duration! */
+  animation-duration: 0.9s; /* don't forget to set a duration! */
+}
+
+.contact_animate__fadeInDown{
+  animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.6s; /* don't forget to set a duration! */
 }
 
 .reveal{
@@ -649,8 +654,33 @@ body {
 }
 
 #linkedin{
-  left: 23rem;
+  left: 26rem;
+  transition: 0.4s;
 } 
+
+#github{
+  transition: 0.4s;
+}
+
+#contact{
+  transition: 0.4s;
+  left: 19rem;
+}
+
+#linkedin:hover {
+  width: 5.5rem;
+  transition: 0.4s;
+}
+
+#github:hover {
+  width: 5.5rem;
+  transition: 0.4s;
+}
+
+#contact:hover{
+  width: 5.5rem;
+  transition: 0.4s;
+}
 /* --------------- */
 
   /* MAIN */
@@ -730,37 +760,28 @@ body {
   /* PROJECT */
 
 .main__flex-containers {
-  height: 30vw;
+  height: 60vh;
   margin-top: 15rem;
   margin-bottom: 15rem;
 }
 
 .main__flex-containers__img{
   border-radius: 0rem;
-  width: 52%;
+  width: 52vw;
+  justify-content: space-evenly;
 }
 
 #cosyworking > .main__logo-1{
   width: 16vw;
-  transition: 0.5s;
-  margin-top: 15rem;
-}
-
-#cosyworking:hover > .main__logo-1{
-  width: 17vw;
-  transition: 0.5s;
+  margin-top: 0rem;
+  margin-bottom: 4rem;
 }
 
 
 #kanban > .in-process{
-  transition: 0.5s;
-  margin-top: 28rem;
+  margin-top: 20rem;
 }
 
-#kanban:hover > .in-process{
-  font-size: 1.8vw;
-  transition: 0.5s;
-}
 
 .vertical-text{
   gap:13rem;
@@ -781,7 +802,8 @@ body {
 
 .click_call{
   font-size: 1vw;
-  margin-top: 20rem;
+  margin-top: 0rem;
+  color:#FFF;
 }
 
   /* --------------------- */
@@ -840,10 +862,13 @@ path {
 
 .click_svg{
   display: block;
-  width: 12rem;
+  width: 7vw;
   position: absolute;
-  margin-top: 40rem;
-  z-index: -1;
+  margin-top: 32rem;
+}
+
+.click_call:hover{
+  color:#FFD803;
 }
 
 .footer-svg {
