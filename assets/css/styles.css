@@ -184,14 +184,15 @@
     margin-right: 2rem;
     display: inline-block;
     cursor: pointer;
+    z-index: 2;
   }
 
   #linkedin{
-    left: 18rem;
+    left: 18.8rem;
   }
 
   #contact{
-    left:13rem;
+    left:13.5rem;
   }
 
 
@@ -233,7 +234,7 @@
 .main__modal{
   justify-self: center;
   border: 2px solid #4e4683;
-  width: 80%;
+  width: 75%;
   height: 140vw;
   border-radius: 5rem;
   display:none;
@@ -373,7 +374,8 @@ line-height: 1.5rem;
 
 #cosyworking > .main__logo-1{
   width: 30vw;
-  margin-top: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 #kanban{
@@ -381,8 +383,8 @@ line-height: 1.5rem;
 }
 
 #kanban > .in-process{
-  margin-top: 11rem;
-  padding-bottom: 1.7rem;
+  margin-top: 6rem;
+  padding-bottom: 4rem;
 }
 
 #rapido-api{
@@ -396,7 +398,7 @@ line-height: 1.5rem;
   cursor: pointer;
   padding: 1.5rem;
   text-decoration: none;
-  margin-top: 0.7rem;
+  margin-top: 0.3rem;
 }
 
 
@@ -525,7 +527,7 @@ path {
     display: block;
     width: 6rem;
     position: absolute;
-    margin-top: 15rem;
+    margin-top: 11rem;
     z-index: -1;
 }
 
@@ -773,13 +775,18 @@ body {
 
 #cosyworking > .main__logo-1{
   width: 16vw;
-  margin-top: 0rem;
-  margin-bottom: 4rem;
+  margin-top: 6rem;
+  margin-bottom: 0rem;
 }
 
 
 #kanban > .in-process{
-  margin-top: 20rem;
+  margin-top: 10rem;
+  margin-bottom: 9rem;
+}
+
+#rapido-api > .in-process{
+  margin-bottom: 9rem;
 }
 
 
@@ -864,7 +871,7 @@ path {
   display: block;
   width: 7vw;
   position: absolute;
-  margin-top: 32rem;
+  margin-top: 33rem;
 }
 
 .click_call:hover{
