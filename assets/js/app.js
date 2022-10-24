@@ -1,5 +1,5 @@
 const app = {
-  init(){
+  init: function() {
     app.changeMenuIcon();
 
     app.displayMenuIcons();
@@ -21,7 +21,7 @@ changeMenuIcon() {
   });
 },
 
-//~ ----------  display github-linkedin icons
+//~ ----------  Display github-linkedin icons
 displayMenuIcons() {
   menuHTMLElm.addEventListener('click', () => {
       linkedinIcon.classList.toggle('display');
@@ -30,7 +30,7 @@ displayMenuIcons() {
     });
 },
 
-//~ ----------  display modal
+//~ ----------  Display modal
 displayModal() {
     discoverBtn.addEventListener('click', () => {
     textAbout.classList.toggle('hidden')
@@ -50,7 +50,7 @@ displayModal() {
 },
 
 
-//~ ----------  display on scroll
+//~ ----------  Display on scroll
 reveal() {
     const reveals = document.querySelectorAll(".reveal");
     for (var i = 0; i < reveals.length; i++) {
@@ -65,26 +65,7 @@ reveal() {
     }
   },
 
-  svgDrawing() {
-    let path = document.getElementById('path');
-    let pathLenght = path.getTotalLength();
-
-    path.style.strokeDasharray = pathLenght + ' ' + pathLenght;
-
-    path.style.strokeDashoffset = pathLenght;
-
-    window.addEventListener('scroll', () => {
-
-      console.log(window.scrollY)
-
-        const scrollPercentage = (document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-  
-        const drawLength = pathLenght * scrollPercentage * scrollPercentage;
-  
-        path.style.strokeDashoffset = pathLenght - drawLength;
-    })
-  },
-
+  //~ ----------  Scroll all the way down
   contactScroll() {
     contactIcon.addEventListener('click', () => {
       scrollTo({
