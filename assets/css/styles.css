@@ -258,11 +258,11 @@
   font-weight: bold;
 }
 
-.main__dev-icon{
+.main__modal__dev-icon{
   width: 15vw;
 }
 
-.main__database_modal{
+.main__modal__data{
   font-size: 3vw;
   font-family: "Epilogue", sans-serif;
   color: #4e4683c5;
@@ -728,11 +728,11 @@ body {
   margin-bottom: 2rem;
 }
 
-.main__dev-icon{
+.main__modal__dev-icon{
   width: 5vw;
 }
 
-.main__database_modal{
+.main__modal__data{
   font-size: 1vw;
   line-height: 3rem;
 }
