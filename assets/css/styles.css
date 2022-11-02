@@ -232,14 +232,19 @@
   /* MODAL */
 
 .main__modal{
-  justify-self: center;
   border: 2px solid #4e4683;
   width: 75%;
   height: 140vw;
   border-radius: 5rem;
   display:none;
   animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 1.2s; /* don't forget to set a duration! */
+  animation-duration: 1.2s; /* duration */
+}
+
+.main__modal__title{
+  font-family: "Epilogue", sans-serif;
+  color:#4e4683c5;
+  font-weight: bold;
 }
 
 .main__modal__containers{
@@ -248,14 +253,6 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-}
-
-.main__modal__title{
-  font-family: "Epilogue", sans-serif;
-  color:#4e4683c5;
-  text-align: center;
-  display: block;
-  font-weight: bold;
 }
 
 .main__modal__dev-icon{
@@ -708,7 +705,6 @@ body {
   /* MODAL */
 
 .main__modal{
-  padding:0;
   width: 85%;
   height: 30vw;
 }
@@ -716,16 +712,13 @@ body {
 .main__modal__containers{
   width: 17vw;
   height: 100%;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 4rem;
 }
 
 .main__modal__title{
   font-size: 1.5vw;
-  margin-bottom: 2rem;
 }
 
 .main__modal__dev-icon{
@@ -735,10 +728,6 @@ body {
 .main__modal__data{
   font-size: 1vw;
   line-height: 3rem;
-}
-
-.hyper_text{
-  margin-top: 0;
 }
 
 /* --- */
