@@ -875,7 +875,6 @@ path {
 
   .main__flex{
     flex-direction: row;
-    justify-content: center;
     gap: 0vw;
   }
 
